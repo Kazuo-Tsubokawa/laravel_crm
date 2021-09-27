@@ -24,6 +24,7 @@ class CustomerFactory extends Factory
         $faker = \Faker\Factory::create('ja_JP');
 
         return [
+            'id' => $faker->id(),
             'name' => $faker->name(),
             'email' => $faker->email(),
             'zipcode' => $faker->postcode(),

@@ -16,7 +16,7 @@ class CustomerController extends Controller
     {
         $customers = Customer::all();
 
-        return view('customers.index', compact('shops'));
+        return view('customers.index', compact('customers'));
     }
 
     /**
@@ -103,5 +103,11 @@ class CustomerController extends Controller
         $customer->delete();
 
         return redirect()->route('customers.index');
+    }
+
+    
+    public function zipcode(Customer $customer)
+    {
+        return view('customers.zipcode');
     }
 }
