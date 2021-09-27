@@ -5,10 +5,12 @@
 @section('content')
 
     <h1>郵便番号検索</h1>
-    <div>
+    <form action="/customers/create" method="GET">
+        @csrf
+
         <label for="zipcode">郵便番号検索</label>
         <input type="text" name='zipcode' placeholder="検索したい郵便番号">
 
-        <button onclick="location.href='/customers/create'">検索</button>
-    </div>
+        <input type="submit" value="検索">
+    </form>
     <button onclick="location.href='/customers'">一覧に戻る</button>

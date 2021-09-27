@@ -22,7 +22,6 @@ class CreateCustomersTable extends Migration
             $table->string('telephone');
             $table->timestamps();
             $table->softDeletes();
-            
         });
     }
 

@@ -3,7 +3,21 @@
 @section('title', '編集画面')
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
     <h1>編集画面</h1>
+    @if ($errors->any())
+        <div class="error">
+            <p>
+                <b>{{ count($errors) }}件のエラーがあります。</b>
+            </p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="/customers/{{ $customer->id }}" method="POST">
         @csrf
         @method('PATCH')
