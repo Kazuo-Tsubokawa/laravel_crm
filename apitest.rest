@@ -1,0 +1,3 @@
+### 一覧画面
+GET /api/search?zipcode=7372602 HTTP/1.1
+Host: zipcloud.ibsnet.co.jp
