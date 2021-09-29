@@ -24,11 +24,11 @@ class CustomerFactory extends Factory
         $faker = \Faker\Factory::create('ja_JP');
 
         return [
-            'id' => $faker->id(),
+            // 'id' => $faker->id(),
             'name' => $faker->name(),
             'email' => $faker->email(),
             'zipcode' => $faker->postcode(),
-            'address' => $faker->address(),
+            'address' => $faker->streetAddress(),
             'telephone' => $faker->phoneNumber(),
         ];
     }
